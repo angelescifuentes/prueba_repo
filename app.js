@@ -12,7 +12,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,8 +25,7 @@ app.use('/', indexRouter);
 app.get('/usuarios', db.getUsuarios);
 app.get('/usuarios/:id', db.getUsuarioById);
 app.post('/usuarios', db.createUsuario);
-app.put('/usuarios/:id', db.updateUsuario);
-app.delete('/usuarios/:id', db.deleteUsuario);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
