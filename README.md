@@ -9,6 +9,7 @@ $ npm install
 ```sh
 $ npm test
 ```
+Para terminar la ejecucion del test control+c
 
 # Inicio servicio
 ```sh
