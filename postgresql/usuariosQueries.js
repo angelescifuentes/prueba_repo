@@ -30,13 +30,13 @@ const getUsuarioById = (request, response) => {
 }
 
 const createUsuario = (request, response) => {
-  const { id, nombre, email } = request.body
+  const { nombre, email } = request.body
 
-  pool.query('INSERT INTO usuarios (id, nombre, email) VALUES ($1, $2, $3)', [id, nombre, email], (error, results) => {
+  pool.query('INSERT INTO usuarios ( nombre, email) VALUES ( $1, $2) RETURNING id', [nombre, email], (error, results) => {
     if (error) {
       throw error
     }
-    response.status(200).send(`Usuario added`)
+    response.status(200).send(results.rows)
   })
 }
 

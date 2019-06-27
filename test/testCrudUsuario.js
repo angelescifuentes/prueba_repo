@@ -11,8 +11,7 @@ chai.use(chaiHttp);
 
 /* user object */
 var usuario = {
-    id: 50,
-    name: "Nuevo Usuario",
+    nombre: "Nuevo Usuario",
     email: "Nuevo@Nuevo.com"
 }
 
@@ -54,7 +53,7 @@ describe(' Usuario crud test', () => {
               .send(usuario)
               .then(res => {
                   done();
-                  console.log('status code: %s',res.statusCode)
+                  console.log('status code: %s',res.statusCode, 'id creado', res.body)
               })
               .catch(err => {
                   done(err);
