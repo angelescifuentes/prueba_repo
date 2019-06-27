@@ -1,5 +1,5 @@
 # Prueba para RokketLabs
-Esta prueba consiste en la creación de una APi rest para visualizar y crear usuarios en una base de datos postgresql, que se encuentra en la nube.
+Esta prueba consiste en la creación de una API rest para visualizar y crear usuarios en una base de datos postgresql, que se encuentra en la nube.
 
 Los servicios implementados son:
 * GET   http://localhost:3000/usuarios , que trae un json con todos los usuarios de la BD
